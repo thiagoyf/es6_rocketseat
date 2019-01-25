@@ -49,3 +49,42 @@ var find2 = arr.find(function (item) {
   return item === 2;
 });
 console.log(find2); // undefined
+// Arrow Function
+
+var array2 = [1, 3, 4, 5, 8, 9];
+var newArray2_0 = arr.map(function (item) {
+  return item * 2;
+});
+console.log(newArray2_0);
+var newArray2_1 = arr.map(function (item) {
+  return item * 2;
+});
+console.log(newArray2_1);
+var newArray2_2 = arr.map(function (item) {
+  return item * 2;
+});
+console.log(newArray2_2);
+var newArray2_3 = arr.map(function (item) {
+  return item * 2;
+});
+console.log(newArray2_3); // function teste1()
+
+var teste1 = function teste1() {
+  return 'teste';
+};
+
+console.log(teste1());
+
+var teste2 = function teste2() {
+  return [1, 2, 3];
+};
+
+console.log(teste2()); // quando for retornar um objeto tem que ser desse jeito
+
+var teste3 = function teste3() {
+  return {
+    nome: 'Thiago'
+  };
+};
+
+console.log(teste3());
