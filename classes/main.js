@@ -125,3 +125,63 @@ function mostraNome2({ nome }) {
   console.log(nome);
 }
 mostraNome2(usuario);
+
+// REST
+
+const usuario_rest = {
+  usuario_rest_nome: 'Thiago',
+  usuario_rest_idade: 28,
+  usuario_rest_empresa: 'Byter'
+};
+
+const { usuario_rest_nome, ...resto } = usuario_rest
+
+console.log(usuario_rest_nome); // Thiago
+console.log(resto) // { usuario_rest_idade : 28, usuario_rest_empresa: "Byter" }
+
+const arr_rest = [1, 2, 3, 4];
+
+const [arr_rest_a, arr_rest_b, ...arr_rest_resto] = arr_rest;
+console.log(arr_rest_a); // 1
+console.log(arr_rest_b); // 2
+console.log(arr_rest_resto); // [3, 4]
+
+function soma_rest(...params) {
+  return params.reduce((total, next) => total + next);
+}
+console.log(soma_rest(1)); // 1
+console.log(soma_rest(1, 5)); // 6
+console.log(soma_rest(1, 2, 3)); // 6
+console.log(soma_rest(1, 2, 5, 2, 3)); // 13
+
+function return_rest(a, b, ...params) {
+  return params;
+}
+console.log(return_rest(1, 2, 3)); // [3]
+console.log(return_rest(1, 2, 3, 4)); // [3, 4]
+
+// SPREAD
+
+const arr_spread1 = [1, 2, 3];
+const arr_spread2 = [4, 5, 6];
+
+const arr_spread3 = [...arr_spread1, ...arr_spread2]; 
+
+console.log(arr_spread3); // [1, 2, 3, 4, 5, 6]
+
+const usuario_spread1 = {
+  usuario_spread1_nome: 'Thiago',
+  usuario_spread1_idade: 28,
+  usuario_spread1_empresa: 'Byter'
+}
+
+// também há a possibilidade de acrescer novos atributos...
+const usuario_spread2 = { ...usuario_spread1, usuario_spread1_nome: 'A' }
+console.log(usuario_spread2); // { usuario_spread1_nome: "A", usuario_spread1_idade: 28, usuario_spread1_empresa: "Byter" }
+
+// Template literals - forma de incluir variáveis dentro do string
+
+const tl_nome = 'Thiago';
+const tl_idade = 28;
+console.log('Meu nome é ' + tl_nome + ' e tenho ' + tl_idade + ' anos'); // Meu nome é Thiago e tenho 28 anos
+console.log(`Meu nove é ${tl_nome} e tenho ${tl_idade} anos`); // Meu nome é Thiago e tenho 28 anos
