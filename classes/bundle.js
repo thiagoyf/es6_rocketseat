@@ -87,4 +87,38 @@ var teste3 = function teste3() {
   };
 };
 
-console.log(teste3());
+console.log(teste3()); // Valor padrao
+
+function soma_sem_valor_padrao(a, b) {
+  return a + b;
+}
+
+console.log(soma_sem_valor_padrao(1, 2)); // 3
+
+console.log(soma_sem_valor_padrao(1)); // NaN
+
+console.log(soma_sem_valor_padrao()); // NaN
+
+function soma_com_valor_padrao() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 10;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 20;
+  return a + b;
+}
+
+console.log(soma_com_valor_padrao(1, 2)); // 3
+
+console.log(soma_com_valor_padrao(1)); // 21
+
+console.log(soma_com_valor_padrao()); // 30
+
+var soma_com_valor_padrao_const = function soma_com_valor_padrao_const() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
+  return a + b;
+};
+
+console.log(soma_com_valor_padrao_const(1, 2)); // 3
+
+console.log(soma_com_valor_padrao_const(1)); // 7
+
+console.log(soma_com_valor_padrao_const()); // 9

@@ -72,3 +72,23 @@ console.log(teste2());
 // quando for retornar um objeto tem que ser desse jeito
 const teste3 = () => ({ nome: 'Thiago' });
 console.log(teste3());
+
+// Valor padrao
+function soma_sem_valor_padrao(a , b) {
+  return a + b;
+}
+console.log(soma_sem_valor_padrao(1, 2)); // 3
+console.log(soma_sem_valor_padrao(1)); // NaN
+console.log(soma_sem_valor_padrao()); // NaN
+
+function soma_com_valor_padrao(a = 10, b = 20) {
+  return a + b;
+}
+console.log(soma_com_valor_padrao(1, 2)); // 3
+console.log(soma_com_valor_padrao(1)); // 21
+console.log(soma_com_valor_padrao()); // 30
+
+const soma_com_valor_padrao_const = (a = 3, b = 6) => a + b;
+console.log(soma_com_valor_padrao_const(1, 2)); // 3
+console.log(soma_com_valor_padrao_const(1)); // 7
+console.log(soma_com_valor_padrao_const()); // 9
