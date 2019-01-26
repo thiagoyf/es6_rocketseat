@@ -185,3 +185,15 @@ const tl_nome = 'Thiago';
 const tl_idade = 28;
 console.log('Meu nome é ' + tl_nome + ' e tenho ' + tl_idade + ' anos'); // Meu nome é Thiago e tenho 28 anos
 console.log(`Meu nove é ${tl_nome} e tenho ${tl_idade} anos`); // Meu nome é Thiago e tenho 28 anos
+
+// Object Short Sintax
+
+const object_short_sintax_nome = 'Thiago';
+const object_short_sintax_idade = 28;
+
+const object_short_sintax_usuario = {
+  object_short_sintax_nome,
+  object_short_sintax_idade,
+  object_short_sintax_empresa: 'Byter'
+};
+console.log(object_short_sintax_usuario); // {object_short_sintax_nome: "Thiago", object_short_sintax_idade: 28, object_short_sintax_empresa: "Byter"}

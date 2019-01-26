@@ -240,3 +240,13 @@ var tl_idade = 28;
 console.log('Meu nome é ' + tl_nome + ' e tenho ' + tl_idade + ' anos'); // Meu nome é Thiago e tenho 28 anos
 
 console.log("Meu nove \xE9 ".concat(tl_nome, " e tenho ").concat(tl_idade, " anos")); // Meu nome é Thiago e tenho 28 anos
+// Object Short Sintax
+
+var object_short_sintax_nome = 'Thiago';
+var object_short_sintax_idade = 28;
+var object_short_sintax_usuario = {
+  object_short_sintax_nome: object_short_sintax_nome,
+  object_short_sintax_idade: object_short_sintax_idade,
+  object_short_sintax_empresa: 'Byter'
+};
+console.log(object_short_sintax_usuario); // {object_short_sintax_nome: "Thiago", object_short_sintax_idade: 28, object_short_sintax_empresa: "Byter"}
