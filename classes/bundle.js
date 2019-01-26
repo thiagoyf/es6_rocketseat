@@ -122,3 +122,34 @@ console.log(soma_com_valor_padrao_const(1, 2)); // 3
 console.log(soma_com_valor_padrao_const(1)); // 7
 
 console.log(soma_com_valor_padrao_const()); // 9
+// Desestruturação
+
+var usuario = {
+  nome: 'Thiago',
+  idade: 28,
+  endereco: {
+    cidade: 'Campo Grande',
+    estado: 'MS'
+  }
+};
+var nome1 = usuario.nome;
+var idade1 = usuario.idade;
+var cidade1 = usuario.endereco.cidade;
+console.log(nome1, idade1, cidade1);
+var nome = usuario.nome,
+    idade = usuario.idade,
+    cidade = usuario.endereco.cidade;
+console.log(nome, idade, cidade); // normalmente
+
+function mostraNome1(usuario) {
+  console.log(usuario.nome);
+}
+
+mostraNome1(usuario); // usando desestruturacao para mostrar um campo do objeto
+
+function mostraNome2(_ref) {
+  var nome = _ref.nome;
+  console.log(nome);
+}
+
+mostraNome2(usuario);

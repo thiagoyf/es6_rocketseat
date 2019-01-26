@@ -92,3 +92,36 @@ const soma_com_valor_padrao_const = (a = 3, b = 6) => a + b;
 console.log(soma_com_valor_padrao_const(1, 2)); // 3
 console.log(soma_com_valor_padrao_const(1)); // 7
 console.log(soma_com_valor_padrao_const()); // 9
+
+// Desestruturação
+
+const usuario = {
+  nome: 'Thiago',
+  idade: 28,
+  endereco: {
+    cidade: 'Campo Grande',
+    estado: 'MS'
+  }
+};
+
+const nome1 = usuario.nome;
+const idade1 = usuario.idade;
+const cidade1 = usuario.endereco.cidade;
+
+console.log(nome1, idade1, cidade1);
+
+
+const { nome, idade, endereco: { cidade } } = usuario;
+console.log(nome, idade, cidade);
+
+// normalmente
+function mostraNome1(usuario) {
+  console.log(usuario.nome);
+}
+mostraNome1(usuario);
+
+// usando desestruturacao para mostrar um campo do objeto
+function mostraNome2({ nome }) {
+  console.log(nome);
+}
+mostraNome2(usuario);
