@@ -1,0 +1,21 @@
+{
+  "name": "desafio1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
+    "@babel/preset-env": "^7.3.1"
+  },
+  "scripts": {
+    "dev1": "babel ./main1.js -o ./bundle1.js -w",
+    "dev2": "babel ./main2.js -o ./bundle2.js -w",
+    "dev3": "babel ./main3.js -o ./bundle3.js -w",
+    "dev4": "babel ./main4.js -o ./bundle4.js -w",
+    "dev5": "babel ./main5.js -o ./bundle5.js -w",
+    "dev6": "babel ./main6.js -o ./bundle6.js -w",
+    "dev7": "babel ./main7.js -o ./bundle7.js -w"
+  }
+}
