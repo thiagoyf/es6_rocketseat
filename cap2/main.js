@@ -1,6 +1,5 @@
-// import { soma } from './funcoes'
-import somaSoma from './soma';
-import { soma as somaFunction, sub } from './funcoes'
+import somaFunction, { sub } from './funcoes'
+import somaSoma from './soma'
 
 console.log(somaSoma(1, 2));
 console.log(somaFunction(1, 2));
