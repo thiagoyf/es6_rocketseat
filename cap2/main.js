@@ -1,4 +1,7 @@
 // import { soma } from './funcoes'
-import soma from './soma';
+import somaSoma from './soma';
+import { soma as somaFunction, sub } from './funcoes'
 
-console.log(soma(1, 2));
+console.log(somaSoma(1, 2));
+console.log(somaFunction(1, 2));
+console.log(sub(2, 1));
